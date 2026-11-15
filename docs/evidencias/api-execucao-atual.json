@@ -1,0 +1,128 @@
+{
+  "data": "2026-11-14",
+  "operacao": "Somente leitura",
+  "ambiente": "localhost:8081 e MongoDB",
+  "requisicoes": [
+    {
+      "resposta": {
+        "sucesso": true,
+        "dados": {
+          "total": 0,
+          "abertos": 0,
+          "emAndamento": 0,
+          "resolvidos": 0,
+          "outros": 0,
+          "taxaResolucao": 0.0,
+          "semDataAbertura": 0,
+          "comConsideracoesTecnicas": 0
+        },
+        "erro": null
+      },
+      "caminho": "/api/dashboard/indicadores",
+      "metodo": "GET",
+      "statusHttp": 200
+    },
+    {
+      "resposta": {
+        "sucesso": true,
+        "dados": {
+          "agrupamento": "mes",
+          "semData": 0,
+          "periodos": []
+        },
+        "erro": null
+      },
+      "caminho": "/api/dashboard/por-periodo?agrupamento=mes",
+      "metodo": "GET",
+      "statusHttp": 200
+    },
+    {
+      "resposta": {
+        "sucesso": true,
+        "dados": [],
+        "erro": null
+      },
+      "caminho": "/api/dashboard/situacao",
+      "metodo": "GET",
+      "statusHttp": 200
+    },
+    {
+      "resposta": {
+        "sucesso": true,
+        "dados": [],
+        "erro": null
+      },
+      "caminho": "/api/dashboard/tipos",
+      "metodo": "GET",
+      "statusHttp": 200
+    },
+    {
+      "resposta": {
+        "sucesso": true,
+        "dados": {
+          "total": 0,
+          "pagina": 0,
+          "tamanho": 20,
+          "itens": []
+        },
+        "erro": null
+      },
+      "caminho": "/api/dashboard/chamados?pagina=0&tamanho=20",
+      "metodo": "GET",
+      "statusHttp": 200
+    },
+    {
+      "resposta": {
+        "sucesso": false,
+        "dados": null,
+        "erro": {
+          "status": 400,
+          "mensagem": "Parâmetros inválidos. Use datas AAAA-MM-DD, agrupamento dia/mês (mes) e limites válidos."
+        }
+      },
+      "caminho": "/api/dashboard/indicadores?dataInicio=2026-11-15&dataFim=2026-11-01",
+      "metodo": "GET",
+      "statusHttp": 400
+    },
+    {
+      "resposta": {
+        "sucesso": false,
+        "dados": null,
+        "erro": {
+          "status": 404,
+          "mensagem": "Chamado não encontrado"
+        }
+      },
+      "caminho": "/api/dashboard/chamados/000000000000000000000000",
+      "metodo": "GET",
+      "statusHttp": 404
+    },
+    {
+      "resposta": {
+        "sucesso": false,
+        "dados": null,
+        "erro": {
+          "status": 400,
+          "mensagem": "Parâmetros inválidos. Use datas AAAA-MM-DD, agrupamento dia/mês (mes) e limites válidos."
+        }
+      },
+      "caminho": "/api/dashboard/chamados/id-invalido",
+      "metodo": "GET",
+      "statusHttp": 400
+    },
+    {
+      "resposta": {
+        "sucesso": false,
+        "dados": null,
+        "erro": {
+          "status": 401,
+          "mensagem": "Autenticação necessária. Entre novamente no sistema."
+        }
+      },
+      "caminho": "/api/dashboard/indicadores",
+      "metodo": "GET",
+      "autenticado": false,
+      "statusHttp": 401
+    }
+  ]
+}

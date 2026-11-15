@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Editar Chamado</title>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Thindesk | Editar chamado</title><link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
-<body>
+<body><main class="edit-page dashboard-panel">
     <h1>Editar Chamado</h1>
     <form th:action="@{/chamados/atualizar/{id}(id=${chamado.id})}" th:object="${chamado}" method="post">
         <label for="descricao">Descrição:</label>
@@ -27,5 +27,5 @@
 
         <button type="submit">Salvar</button>
     </form>
-</body>
+</main></body>
 </html>

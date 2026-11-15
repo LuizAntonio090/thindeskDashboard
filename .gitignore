@@ -1,0 +1,12 @@
+/target/
+/tmp/
+/output/
+/.thindesk-local.properties
+/.env
+/.env.*
+*.log
+/.idea/
+/.vscode/
+*.iml
+Thumbs.db
+.DS_Store
