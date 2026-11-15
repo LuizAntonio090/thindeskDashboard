@@ -1,0 +1,35 @@
+{
+  "total": 48,
+  "suites": [
+    {
+      "testes": 18,
+      "erros": 0,
+      "ignorados": 0,
+      "classe": "com.pfc.thindesk.ConfiguracaoWebTest",
+      "falhas": 0
+    },
+    {
+      "testes": 24,
+      "erros": 0,
+      "ignorados": 0,
+      "classe": "com.pfc.thindesk.DashboardApiTest",
+      "falhas": 0
+    },
+    {
+      "testes": 2,
+      "erros": 0,
+      "ignorados": 0,
+      "classe": "com.pfc.thindesk.DashboardViewTest",
+      "falhas": 0
+    },
+    {
+      "testes": 4,
+      "erros": 0,
+      "ignorados": 0,
+      "classe": "com.pfc.thindesk.demo.DemonstracaoConfigTest",
+      "falhas": 0
+    }
+  ],
+  "data": "2026-11-14",
+  "observacao": "Inclui os quatro testes de proteção e consistência da carga de demonstração."
+}

@@ -1,0 +1,107 @@
+{
+  "periodos": {
+    "sucesso": true,
+    "dados": {
+      "agrupamento": "mes",
+      "semData": 7,
+      "periodos": [
+        {
+          "periodo": "2026-06",
+          "quantidade": 9
+        },
+        {
+          "periodo": "2026-07",
+          "quantidade": 14
+        },
+        {
+          "periodo": "2026-08",
+          "quantidade": 33
+        },
+        {
+          "periodo": "2026-09",
+          "quantidade": 51
+        },
+        {
+          "periodo": "2026-10",
+          "quantidade": 54
+        },
+        {
+          "periodo": "2026-11",
+          "quantidade": 24
+        }
+      ]
+    },
+    "erro": null
+  },
+  "indicadores": {
+    "sucesso": true,
+    "dados": {
+      "total": 192,
+      "abertos": 48,
+      "emAndamento": 38,
+      "resolvidos": 90,
+      "outros": 16,
+      "taxaResolucao": 46.88,
+      "semDataAbertura": 7,
+      "comConsideracoesTecnicas": 175
+    },
+    "erro": null
+  },
+  "filtroAbertos": {
+    "sucesso": true,
+    "dados": {
+      "total": 48,
+      "abertos": 48,
+      "emAndamento": 0,
+      "resolvidos": 0,
+      "outros": 0,
+      "taxaResolucao": 0.0,
+      "semDataAbertura": 5,
+      "comConsideracoesTecnicas": 41
+    },
+    "erro": null
+  },
+  "situacao": {
+    "sucesso": true,
+    "dados": [
+      {
+        "nome": "Concluído",
+        "quantidade": 70,
+        "percentual": 36.46
+      },
+      {
+        "nome": "Aberto",
+        "quantidade": 48,
+        "percentual": 25.0
+      },
+      {
+        "nome": "Em andamento",
+        "quantidade": 38,
+        "percentual": 19.79
+      },
+      {
+        "nome": "Fechado",
+        "quantidade": 20,
+        "percentual": 10.42
+      },
+      {
+        "nome": "Pendente",
+        "quantidade": 10,
+        "percentual": 5.21
+      },
+      {
+        "nome": "Cancelado",
+        "quantidade": 6,
+        "percentual": 3.13
+      }
+    ],
+    "erro": null
+  },
+  "observacao": "Carga fictícia inserida no MongoDB; validação somente de leitura após a inserção.",
+  "data": "2026-11-14",
+  "segundaPagina": {
+    "pagina": 1,
+    "itens": 20,
+    "total": 192
+  }
+}

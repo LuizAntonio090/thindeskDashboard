@@ -47,7 +47,13 @@ No Windows, também é possível abrir **Iniciar Thindesk.cmd**. Acesse [http://
 
 Conta demonstrativa da configuração padrão: `admin` / `thindesk`. Ela pode ser substituída pelas propriedades do Spring Security. Não se trata de uma credencial do MongoDB. Não utilizar a conta demonstrativa em produção.
 
-Nenhuma carga é importada automaticamente. `chamados.json` é apenas uma carga de referência. Os testes HTTP documentados fizeram somente consultas de leitura e encontraram a base vazia. Os gráficos ficam sem séries nessa situação; não foram criados dados fictícios no banco compartilhado.
+Na inicialização normal, nenhuma carga é importada automaticamente. `chamados.json` é apenas uma referência. As evidências originais da documentação Word registraram a base vazia; posteriormente foi adicionada a carga opcional descrita abaixo, para a gravação do vídeo.
+
+## Carga para gravar o vídeo
+
+Abra **Carregar demonstracao.cmd** para iniciar com 72 chamados fictícios, 8 clientes, equipes, tipos, recursos e horários. Os 72 chamados preenchem os gráficos e ocupam quatro páginas quando a carga está isolada. Os totais também incluem os registros já existentes no banco. A carga não duplica nem sobrescreve registros existentes. Ela fica desativada na inicialização normal.
+
+Consulte [o roteiro e as instruções de remoção](docs/DEMONSTRACAO.md). Depois da gravação, **Remover demonstracao.cmd** remove somente os registros marcados como DEMO. Os registros reais são preservados.
 
 ## API do dashboard
 
@@ -95,20 +101,23 @@ As APIs legadas de chamados e clientes mantêm seu formato direto, sem o envelop
 .\mvnw.cmd test
 ```
 
-Execução em 14 de novembro de 2026: **44 testes, zero falhas, zero erros e zero ignorados**, com `BUILD SUCCESS`.
+Execução em 14 de novembro de 2026: **48 testes, zero falhas, zero erros e zero ignorados**, com `BUILD SUCCESS`.
 
 | Suíte | Casos |
 | --- | ---: |
 | `DashboardApiTest` | 24 |
 | `DashboardViewTest` | 2 |
 | `ConfiguracaoWebTest` | 18 |
+| `DemonstracaoConfigTest` | 4 |
 
 JUnit 5, MockMvc e Mockito verificam contratos, autenticação, filtros, paginação, percentuais, estados vazios, erros e formulários. Os testes automatizados usam dependências de banco/serviço simuladas e não substituem testes de carga ou integração com uma base populada.
 
-A conferência adicional na aplicação conectada ao MongoDB registrou HTTP 200 nas cinco consultas coletivas e HTTP 400, 401 e 404 nos cenários inválidos previstos. A falha 500 foi simulada nos testes, sem interromper o banco. Login e dashboard foram verificados no navegador. Nenhum registro foi criado ou alterado nessas consultas.
+A conferência original na aplicação conectada ao MongoDB registrou HTTP 200 nas cinco consultas coletivas e HTTP 400, 401 e 404 nos cenários inválidos previstos. A falha 500 foi simulada nos testes, sem interromper o banco. Login e dashboard foram verificados no navegador. Nenhum registro foi criado ou alterado nessas consultas.
 
 ## Limites e configuração
 
 Qualquer usuário autenticado pode acessar o dashboard; não há separação de perfil administrador. CSRF permanece desabilitado conforme a base. Bibliotecas visuais usam CDN. Não foram medidos SLA, carga simultânea ou latência máxima. A normalização anterior aos filtros pode limitar o uso de índices; não há garantia de desempenho em grandes volumes.
 
 A data de conclusão não é preenchida automaticamente ao alterar o status. `clienteId` é referência lógica sem validação de integridade referencial. Arquivos compilados, configuração privada, logs e arquivos temporários são ignorados pelo Git. O histórico preexistente em `main` é preservado; a exclusão de arquivos nas branches novas não apaga conteúdo de commits antigos.
+
+Validação posterior da carga: 72 chamados adicionados sem substituir os 120 já existentes, totalizando 192 chamados na consulta realizada. Gráficos, filtros e paginação foram conferidos com dados. Evidências: [respostas após a carga](docs/evidencias/carga-demo-validacao.json), [48 testes](docs/evidencias/testes-carga-demo.json) e [gráficos preenchidos](docs/evidencias/graficos-com-carga.png).
