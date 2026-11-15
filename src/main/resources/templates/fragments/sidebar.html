@@ -1,56 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <div th:fragment="sidebar">
-            <div id="sidebar">
-                <h4 class="text-center py-3">Thindesk Menu</h4>
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/}" aria-current="page">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/chamados}">
-                            <i class="bi bi-headset"></i> <span class="d-none d-md-inline">Chamados</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/clientes}">
-                            <i class="bi bi-person"></i> <span class="d-none d-md-inline">Clientes</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="toggleSubmenu(event, this)">
-                            Configurações
-                            <span class="float-end">&#9662;</span> <!-- Setinha -->
-                        </a>
-                        <ul class="nav flex-column submenu">
-                            <li class="nav-item">
-                                <a class="nav-link" th:href="@{/tecnicos}">
-                                    <i class="bi bi-person"></i> <span class="d-none d-md-inline">Técnicos</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" th:href="@{/tipo-chamado}">
-                                    <i class="bi bi-megaphone"></i> <span class="d-none d-md-inline">Tipo de Chamado</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" th:href="@{/ajustes-horarios}">
-                                    <i class="bi bi-alarm"></i> <span class="d-none d-md-inline">Horário de Atendimento</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" th:href="@{/recursos}">
-                                    <i class="bi bi-screwdriver"></i> <span class="d-none d-md-inline">Recursos</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </body>
-</html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org"><body>
+<header th:fragment="sidebar" id="sidebar">
+    <a class="brand" th:href="@{/}"><span class="brand-symbol">T<span>•</span></span><span>THINDESK<span class="brand-caption">CENTRAL DE ATENDIMENTO</span></span></a>
+    <nav aria-label="Navegação principal"><ul class="nav">
+        <li class="nav-item"><a class="nav-link" th:href="@{/}"><i class="bi bi-house-door"></i> Início</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/dashboard}"><i class="bi bi-grid-1x2"></i> Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/chamados}"><i class="bi bi-headset"></i> Chamados</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/clientes}"><i class="bi bi-people"></i> Clientes</a></li>
+        <li class="nav-item settings-menu"><a class="nav-link" href="#" onclick="toggleSubmenu(event, this)" aria-expanded="false"><i class="bi bi-sliders"></i> Configurações <i class="bi bi-chevron-down"></i></a>
+            <ul class="nav submenu">
+                <li class="nav-item"><a class="nav-link" th:href="@{/tecnicos}">Técnicos</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/tipo-chamado}">Tipo de Chamado</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/ajustes-horarios}">Horário de Atendimento</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/recursos}">Recursos</a></li>
+            </ul>
+        </li>
+    </ul></nav>
+    <span class="workspace-label"><span></span> Espaço de trabalho</span>
+</header>
+</body></html>

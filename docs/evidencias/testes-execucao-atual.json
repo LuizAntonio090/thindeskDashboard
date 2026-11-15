@@ -1,0 +1,76 @@
+[
+  {
+    "falhas": 0,
+    "testes": 18,
+    "erros": 0,
+    "ignorados": 0,
+    "classe": "com.pfc.thindesk.ConfiguracaoWebTest",
+    "duracaoSegundos": "4.482",
+    "casos": [
+      "excluirHorarioRedirecionaParaTela",
+      "paginasExigemLogin",
+      "nomeVazioReexibeErroSemSalvar",
+      "editarCarregaEAtualizaRegistro",
+      "horariosInvalidosReexibemMensagem(String)[1]",
+      "horariosInvalidosReexibemMensagem(String)[2]",
+      "horariosInvalidosReexibemMensagem(String)[3]",
+      "salvarPersisteNaCategoriaDaRota(String)[1]",
+      "salvarPersisteNaCategoriaDaRota(String)[2]",
+      "salvarPersisteNaCategoriaDaRota(String)[3]",
+      "salvarHorarioValidoPersisteCamposDoFormulario",
+      "registroDeOutraCategoriaRetorna404",
+      "excluirRemoveSomenteRegistroDaCategoria",
+      "horariosRenderizamFormularioEValores",
+      "paginasDoMenuRenderizamCadastros(String)[1]",
+      "paginasDoMenuRenderizamCadastros(String)[2]",
+      "paginasDoMenuRenderizamCadastros(String)[3]",
+      "erroRenderizaMensagemLocalSemCanva"
+    ]
+  },
+  {
+    "falhas": 0,
+    "testes": 24,
+    "erros": 0,
+    "ignorados": 0,
+    "classe": "com.pfc.thindesk.DashboardApiTest",
+    "duracaoSegundos": "2.071",
+    "casos": [
+      "sessaoDoFormularioAutenticaFetchDaApi",
+      "falhaMongoRetorna500SemExporDetalhes",
+      "mvcContinuaRedirecionandoParaLogin",
+      "detalheInexistenteRetorna404",
+      "listagemPaginadaIncluiConsideracoes",
+      "basicInvalidoRetornaJson",
+      "indicadoresVaziosNaoDividemPorZero",
+      "indicadoresCalculamPercentualEOutros",
+      "evolucaoMensalSeparaSemData",
+      "todosEndpointsAceitamFiltros(String)[1]",
+      "todosEndpointsAceitamFiltros(String)[2]",
+      "todosEndpointsAceitamFiltros(String)[3]",
+      "todosEndpointsAceitamFiltros(String)[4]",
+      "todosEndpointsAceitamFiltros(String)[5]",
+      "situacaoETiposIncluemPercentuais",
+      "parametrosInvalidosRetornam400(String)[1]",
+      "parametrosInvalidosRetornam400(String)[2]",
+      "parametrosInvalidosRetornam400(String)[3]",
+      "parametrosInvalidosRetornam400(String)[4]",
+      "parametrosInvalidosRetornam400(String)[5]",
+      "parametrosInvalidosRetornam400(String)[6]",
+      "parametrosInvalidosRetornam400(String)[7]",
+      "basicAutenticaCurl",
+      "apiSemSessaoRetornaJsonSemRedirecionar"
+    ]
+  },
+  {
+    "falhas": 0,
+    "testes": 2,
+    "erros": 0,
+    "ignorados": 0,
+    "classe": "com.pfc.thindesk.DashboardViewTest",
+    "duracaoSegundos": "0.667",
+    "casos": [
+      "homeContinuaExibindoBoasVindas",
+      "dashboardRenderizaNoLayoutComSidebar"
+    ]
+  }
+]

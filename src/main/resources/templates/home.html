@@ -1,6 +1,4 @@
-<div class="container-fluid vh-100 d-flex justify-content-center align-items-center" th:fragment="content">
-    <div class="text-center">
-        <h1>Bem-vindo ao</h1>
-        <img th:src="@{/images/logo.png}" alt="Logo" width="500" height="500">
-    </div>
-</div>
+<section xmlns:th="http://www.thymeleaf.org" th:fragment="content" class="welcome-page">
+    <div class="welcome-copy"><p class="eyebrow">SUA CENTRAL DE ATENDIMENTO</p><h1>Bem-vindo ao<br><span>seu próximo<br>dia organizado.</span></h1><p>Chamados, clientes e equipe em um só lugar. Tenha clareza para acompanhar cada atendimento.</p><a th:href="@{/dashboard}" class="btn btn-primary">Acessar dashboard <span aria-hidden="true">↗</span></a></div>
+    <div class="welcome-board"><div class="board-top"><span class="eyebrow">THINDESK / WORKSPACE</span><span class="board-dot"></span></div><h2>Tudo conectado.<br>Você no controle.</h2><div class="welcome-orbit" aria-hidden="true"><span class="orbit-core">T<span>•</span></span><span class="orbit-tag tag-one">Clientes</span><span class="orbit-tag tag-two">Equipe</span><span class="orbit-tag tag-three">Chamados</span></div><div class="welcome-shortcuts"><a th:href="@{/chamados}"><i class="bi bi-headset"></i> Consultar chamados <span>↗</span></a><a th:href="@{/clientes}"><i class="bi bi-people"></i> Acompanhar clientes <span>↗</span></a></div></div>
+</section>
