@@ -4,7 +4,7 @@ Projeto acadêmico de central de atendimento com API integrada ao MongoDB e dash
 
 ## Entrega e Gitflow
 
-Repositório: [LuizAntonio090/tindeskDashboard](https://github.com/LuizAntonio090/tindeskDashboard).
+Repositório: [LuizAntonio090/thindeskDashboard](https://github.com/LuizAntonio090/thindeskDashboard).
 
 **A implementação da atividade está na branch `feature/api-dashboard`.**
 
@@ -29,8 +29,8 @@ Fluxo de revisão: `feature/api-dashboard` → `develop`. A implementação perm
 Requisitos: JDK 23 ou superior compatível, MongoDB 4.2+ e conexão de rede para dependências e bibliotecas carregadas por CDN. A validação utilizou JDK 27.
 
 ```powershell
-git clone https://github.com/LuizAntonio090/tindeskDashboard.git
-cd tindeskDashboard
+git clone https://github.com/LuizAntonio090/thindeskDashboard.git
+cd thindeskDashboard
 git switch feature/api-dashboard
 Copy-Item .thindesk-local.properties.example .thindesk-local.properties
 ```
